@@ -3,7 +3,7 @@ import { define } from "../utils.ts";
 
 import { Header } from "../components/Header.tsx";
 
-export default define.page(function Home(ctx) {
+export default define.page(function Home(_ctx) {
   return (
     <div class="px-4 py-8 mx-auto fresh-gradient min-h-screen">
       <Head>

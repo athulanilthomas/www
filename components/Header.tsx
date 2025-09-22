@@ -28,16 +28,23 @@ export function Header() {
           {navLinks.map((link) => {
             return (
               <li>
-                <a href={link.href} class="aria-[current]:text-primary">{link.label}</a>
+                <a
+                  href={link.href}
+                  class="aria-[current]:text-primary hover:brightness-[0.8]"
+                >
+                  {link.label}
+                </a>
               </li>
             );
           })}
           <span class="hidden lg:flex items-center gap-[1rem]">
             {socialLinks.map((link) => {
               return (
-                <a target="_blank" href={link.href}>
-                  <div class={`${link.icon} text-primary`} />
-                </a>
+                <a
+                  target="_blank"
+                  class={`${link.icon} text-primary hover:brightness-[0.8]`}
+                  href={link.href}
+                />
               );
             })}
           </span>
