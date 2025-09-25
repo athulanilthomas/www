@@ -1,7 +1,9 @@
 import { Head } from "fresh/runtime";
 import { define } from "../utils.ts";
 
-import { Header } from "../components/Header.tsx";
+import { Footer } from "../components/landmarks/Footer.tsx";
+import { Header } from "../components/landmarks/Header.tsx";
+import { SkillCard } from "../components/homepage/SkillCard.tsx"
 
 export default define.page(function Home(_ctx) {
   return (
@@ -9,17 +11,11 @@ export default define.page(function Home(_ctx) {
       <Head>
         <title>Fresh counter</title>
       </Head>
-      <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-        <img
-          class="my-6"
-          src="/logo.svg"
-          width="128"
-          height="128"
-          alt="the Fresh logo: a sliced lemon dripping with juice"
-        />
-        <h1 class="text-4xl font-bold text-white">Welcome to Fresh</h1>
-        <Header />
+      <Header />
+      <div class="max-w-screen-2xl mx-auto flex flex-col items-center justify-center h-100vh">
+        <SkillCard id="typescript"/>
       </div>
+      <Footer />
     </div>
   );
 });
