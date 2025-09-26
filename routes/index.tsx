@@ -3,7 +3,7 @@ import { define } from "../utils.ts";
 
 import { Footer } from "../components/landmarks/Footer.tsx";
 import { Header } from "../components/landmarks/Header.tsx";
-import { SkillCard } from "../components/homepage/SkillCard.tsx"
+import { SkillsCarousel } from "../islands/Carousel/SkillsCarousel.tsx"
 
 export default define.page(function Home(_ctx) {
   return (
@@ -13,7 +13,7 @@ export default define.page(function Home(_ctx) {
       </Head>
       <Header />
       <div class="max-w-screen-2xl mx-auto flex flex-col items-center justify-center h-100vh">
-        <SkillCard id="typescript"/>
+        <SkillsCarousel />
       </div>
       <Footer />
     </div>

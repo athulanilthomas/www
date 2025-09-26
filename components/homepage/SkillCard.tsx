@@ -1,3 +1,5 @@
+import type { HTMLAttributes } from 'preact'
+
 const skills = {
   typescript:{
     logo: "i-logos:typescript-icon",
@@ -6,32 +8,34 @@ const skills = {
   },
   javascript:{
     logo: "i-logos:javascript",
-    background: "",
+    background: "bg-[#c3c99e]",
     label: "JavaScript"
   },
   nuxt:{
     logo: "i-logos:nuxt-icon",
-    background: "",
+    background: "bg-[#6ae9ba]",
     label: "Nuxt"
   },
   deno:{
     logo: "i-logos:deno",
-    background: "",
+    background: "bg-[#70ffaf]",
     label: "Deno"
   },
 };
 
-export interface SkillCardProps {
-  id: keyof typeof skills
+export type Skills = keyof typeof skills
+
+export interface SkillCardProps extends HTMLAttributes {
+  key: Skills
 }
 
-export function SkillCard(props: SkillCardProps) {
+export function SkillCard({ key, class: cls }: SkillCardProps) {
   return (
     <div
-      class={`skill-card-base ${skills[props.id].background} hover:scale-102 transition duration-300 ease-in-out`}
+      class={`skill-card-base ${skills[key].background} hover:scale-102 transition duration-300 ease-in-out`}
     >
-      <div class={`${skills[props.id].logo} text-5xl`} />
-      <span class="font-bold mt-3">{skills[props.id].label}</span>
+      <div class={`${skills[key].logo} text-4xl`} />
+      <span class="font-bold mt-3">{skills[key].label}</span>
     </div>
   );
 }

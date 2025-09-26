@@ -35,6 +35,7 @@
     "npm:@preact/signals@^2.3.1": "2.3.1_preact@10.27.2",
     "npm:@prefresh/vite@^2.4.8": "2.4.10_preact@10.27.2_vite@7.1.5__picomatch@4.0.3_@types+node@24.2.0",
     "npm:@types/node@*": "24.2.0",
+    "npm:embla-carousel@*": "8.6.0",
     "npm:esbuild-wasm@0.25.7": "0.25.7",
     "npm:esbuild@0.25.7": "0.25.7",
     "npm:esbuild@~0.25.5": "0.25.9",
@@ -1213,6 +1214,9 @@
     "electron-to-chromium@1.5.218": {
       "integrity": "sha512-uwwdN0TUHs8u6iRgN8vKeWZMRll4gBkz+QMqdS7DDe49uiK68/UX92lFb61oiFPrpYZNeZIqa4bA7O6Aiasnzg=="
     },
+    "embla-carousel@8.6.0": {
+      "integrity": "sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA=="
+    },
     "esbuild-wasm@0.25.7": {
       "integrity": "sha512-x3t1BlU59YOMtpwzayHxF4LPVujOvNKqm7y6jPvFKC13J8FmJRCdHPJwHq86er7ik+f7uwGcMbe+6KVzLGmsGw==",
       "bin": true
@@ -1695,6 +1699,7 @@
       "npm:@iconify-json/grommet-icons@*",
       "npm:@iconify-json/logos@*",
       "npm:@preact/signals@^2.3.1",
+      "npm:embla-carousel@*",
       "npm:preact@^10.27.2",
       "npm:unocss-preset-scrollbar@*",
       "npm:unocss@latest",
