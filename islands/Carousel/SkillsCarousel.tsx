@@ -1,17 +1,18 @@
 import { createRef } from "preact";
 import { SkillCard, Skills } from "../../components/homepage/SkillCard.tsx";
 import { useEffect } from "preact/hooks";
-import EmblaCarousel from "embla-carousel";
+
+import EmblaCarousel, { EmblaOptionsType } from "embla-carousel";
 
 export function SkillsCarousel() {
   const skills: Skills[] = ["typescript", "javascript", "nuxt", "deno"];
-  const options = { loop: false };
   const carouselRoot = createRef();
+  const options: EmblaOptionsType = { loop: true, active: true };
 
   useEffect(() => {
-    const newEmblaApi = EmblaCarousel(carouselRoot.current, options);
-    return () => newEmblaApi.destroy();
-  });
+    const slider = EmblaCarousel(carouselRoot.current, options);
+    return () => slider.destroy();
+  }, []);
 
   return (
     <div class="skills-carousel overflow-hidden" ref={carouselRoot}>

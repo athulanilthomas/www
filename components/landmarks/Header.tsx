@@ -1,8 +1,12 @@
 export function Header() {
   const navLinks = [
     { href: "/", label: "home" },
-    { href: "/experience", label: "experience" },
-    { href: "/projects", label: "projects" },
+    {
+      href: "/experience",
+      label: "experience",
+      partial: "/partials/experience",
+    },
+    { href: "/projects", label: "projects", partial: "/partials/projects" },
   ];
 
   const socialLinks = [
@@ -30,7 +34,8 @@ export function Header() {
               <li>
                 <a
                   href={link.href}
-                  class="aria-[current]:text-primary hover:brightness-[0.8]"
+                  class="data-[current]:text-primary hover:brightness-[0.8]"
+                  f-partial={link.partial}
                 >
                   {link.label}
                 </a>
