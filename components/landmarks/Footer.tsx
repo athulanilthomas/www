@@ -22,12 +22,20 @@ export function Footer() {
         <div class="flex justify-between text-gray-400">
           <strong class="font-normal">Follow me</strong>
           <span class="flex items-center gap-[1rem]">
-            {links.map((link) => (<a target="_blank" href={link.href} class={`${link.icon} text-primary hover:brightness-[0.8]`} />))}
+            {links.map((link) => (
+              <a
+                target="_blank"
+                href={link.href}
+                class={`${link.icon} text-primary hover:brightness-[0.8]`}
+              />
+            ))}
           </span>
         </div>
       </section>
 
-      <p class="text-gray-300 py-[1.625rem] px-[2rem]">athulanilthomas © {year}</p>
+      <p class="text-gray-300 py-[1.625rem] px-[2rem]">
+        athulanilthomas © {year}
+      </p>
     </footer>
   );
 }
