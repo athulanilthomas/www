@@ -1,13 +1,18 @@
-import { Head } from "fresh/runtime";
+import { Partial } from "fresh/runtime";
 import { define } from "../../utils.ts";
+import { Projects } from '../../components/routes/Projects.tsx'
 
-export default define.page(function Projects(_ctx) {
+import type { RouteConfig } from "fresh";
+
+export const config: RouteConfig = {
+  skipAppWrapper: true,
+  skipInheritedLayouts: true,
+};
+
+export default define.page(function ProjectsPage(_ctx) {
   return (
-    <div>
-      <Head>
-        <title>Projects - Athul Anil Thomas</title>
-      </Head>
-      <div>Projects</div>
-    </div>
+    <Partial name="content">
+      <Projects />
+    </Partial>
   );
 });

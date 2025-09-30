@@ -1,13 +1,8 @@
-import { Head } from "fresh/runtime";
 import { define } from "../utils.ts";
+import { Home } from "../components/routes/Home.tsx";
 
-export default define.page(function Home(_ctx) {
+export default define.page(function HomePage(_ctx) {
   return (
-    <div>
-      <Head>
-        <title>Athul Anil Thomas</title>
-      </Head>
-      <div>Homepage</div>
-    </div>
+    <Home />
   );
 });
