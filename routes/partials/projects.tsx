@@ -1,6 +1,6 @@
 import { Partial } from "fresh/runtime";
 import { define } from "../../utils.ts";
-import { Projects } from '../../components/routes/Projects.tsx'
+import { Projects } from "../../components/routes/Projects.tsx";
 
 import type { RouteConfig } from "fresh";
 
