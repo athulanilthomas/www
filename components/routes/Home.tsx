@@ -1,4 +1,5 @@
 import { Head } from "fresh/runtime";
+import { TechCarousel } from "../../islands/Carousel/TechCarousel.tsx";
 
 export function Home() {
   return (
@@ -6,7 +7,8 @@ export function Home() {
       <Head>
         <title>Athul Anil Thomas</title>
       </Head>
-      <div>Homepage</div>
+      {/* <div class="mb-10">Homepage</div> */}
+      <TechCarousel />
     </div>
   );
 }

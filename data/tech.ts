@@ -1,4 +1,4 @@
-{
+export const techs =  {
   "frontend": {
     "title": "Front-end Engineering Design",
     "items": [
