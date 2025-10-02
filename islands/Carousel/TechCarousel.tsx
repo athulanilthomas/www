@@ -9,7 +9,7 @@ type TechGroup = { title: string; items: Tech[] };
 
 export function TechCarousel() {
   const carouselRoot = createRef();
-  const options: EmblaOptionsType = { loop: true, dragFree: true, align: 'center' };
+  const options: EmblaOptionsType = { loop: true, dragFree: true, align: 'start' };
 
   const technologies = Object.values(techs) as TechGroup[]
 
