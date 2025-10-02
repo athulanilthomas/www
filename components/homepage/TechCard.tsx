@@ -1,3 +1,5 @@
+import type { HTMLAttributes } from 'preact'
+
 const keyToIcon = {
   "vue": "i-logos:javascript",
   "nuxt": "i-logos:nuxt-icon",
@@ -17,21 +19,21 @@ const keyToIcon = {
 
 export type Tech = { label: string; key: keyof typeof keyToIcon };
 
-export interface TechCardProps {
+export interface TechCardProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   items: Tech[];
 }
 
 // flex items-center-safe justify-start gap-3.5
 
-export function TechCard(props: TechCardProps) {
-  const skills = props.items.map((skill) => {
+export function TechCard({ title, items, class: cls, ...attrs }: TechCardProps) {
+  const skills = items.map((skill) => {
     return ({ key: skill.key, label: skill.label, icon: keyToIcon[skill.key] });
   });
 
   return (
-    <div class="h-max px-5 py-9 border-[#232323] border-1 border-solid rounded-xl">
-      <h3 class="color-white mb-5">{props.title}</h3>
+    <div class={`h-max px-5 py-9 border-[#232323] border-1 border-solid rounded-xl, ${cls}`} {...attrs}>
+      <h3 class="color-white mb-5">{title}</h3>
       <div class="grid grid-rows-3 grid-flow-col gap-x-10 gap-y-3">
         {skills.map((tech) => (
           <span

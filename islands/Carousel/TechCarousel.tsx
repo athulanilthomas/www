@@ -9,7 +9,7 @@ type TechGroup = { title: string; items: Tech[] };
 
 export function TechCarousel() {
   const carouselRoot = createRef();
-  const options: EmblaOptionsType = { loop: true, active: true };
+  const options: EmblaOptionsType = { loop: true, dragFree: true, align: 'center' };
 
   const technologies = Object.values(techs) as TechGroup[]
 
@@ -19,10 +19,10 @@ export function TechCarousel() {
   }, []);
 
   return (
-    <div class="skills-carousel overflow-hidden" ref={carouselRoot}>
-      <div class="skills-carousel-container grid grid-flow-col grid-auto-cols-[30%]">
+    <div class="tech-carousel overflow-hidden" ref={carouselRoot}>
+      <div class="tech-carousel-container grid grid-flow-col gap-x-20 grid-auto-cols-50% touch-pan-y touch-pinch-zoom">
         {technologies.map((tech) => (
-          <TechCard title={tech.title} items={tech.items}/>
+          <TechCard title={tech.title} items={tech.items} class="last:mr-20"/>
         ))}
       </div>
     </div>
