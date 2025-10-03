@@ -20,7 +20,7 @@ export function TechCarousel() {
 
   return (
     <div class="tech-carousel overflow-hidden" ref={carouselRoot}>
-      <div class="tech-carousel-container grid grid-flow-col gap-x-20 grid-auto-cols-50% touch-pan-y touch-pinch-zoom">
+      <div class="tech-carousel-container grid grid-flow-col gap-x-20 lg:grid-auto-cols-30% grid-auto-cols-30% touch-pan-y touch-pinch-zoom">
         {technologies.map((tech) => (
           <TechCard title={tech.title} items={tech.items} class="last:mr-20"/>
         ))}
