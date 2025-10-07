@@ -9,7 +9,7 @@ export default function Layout({ Component }: PageProps) {
     <div class="layout">
       <div class="bg-background-primary text-white">
         <Header />
-        <div class="max-w-screen-2xl mx-auto flex flex-col justify-center h-100vh items-center">
+        <div class="max-w-full mx-auto">
           <Partial name="content">
             <Component />
           </Partial>

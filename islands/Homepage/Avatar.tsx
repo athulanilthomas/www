@@ -1,9 +1,14 @@
 import { animate, createScope, utils } from "animejs";
 import { useEffect, useRef } from "preact/hooks";
 
+import type { HTMLAttributes } from "preact";
 import type { Scope } from "animejs";
 
-export function Avatar() {
+export interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
+  src?: string;
+}
+
+export function Avatar(props: AvatarProps) {
   const root = useRef(null);
   const scope = useRef<Scope>(null);
 
@@ -37,7 +42,7 @@ export function Avatar() {
         animate("#clipPathShape", {
           d: points,
           ease: "easeInOutQuad",
-          duration: 2000,
+          duration: 800,
           loop: false,
           onComplete: animatePoints,
         });
@@ -51,8 +56,14 @@ export function Avatar() {
 
   // Return any prerenderable JSX here which makes sense for your island
   return (
-    <div ref={root}>
-      <svg width="0" height="0">
+    <div ref={root} class={props.class}>
+      <svg
+        class="block object-contain md:object-cover"
+        width="0"
+        height="0"
+        overflow="visible"
+        viewBox="-100 -100 700 700"
+      >
         <defs>
           <clipPath id="blob" clipPathUnits="userSpaceOnUse">
             <path
@@ -66,7 +77,7 @@ export function Avatar() {
       <div>
         <img
           src="https://avatars.githubusercontent.com/u/30122216?s=400&u=205c4e5b007db46a47857bcbb4aff49adf6deb6c&v=4"
-          class="block object-center clip-path-[url(#blob)]"
+          class="block object-contain md:object-cover clip-path-[url(#blob)]"
           width="400"
           height="400"
           alt=""

@@ -1,10 +1,13 @@
-import { createRef } from "preact";
+import { createRef, HTMLAttributes } from "preact";
 import { SkillCard, Skills } from "../../components/homepage/SkillCard.tsx";
 import { useEffect } from "preact/hooks";
 
 import EmblaCarousel, { EmblaOptionsType } from "embla-carousel";
 
-export function SkillsCarousel() {
+export interface SkillsCarouselProps extends HTMLAttributes<HTMLDivElement> {
+}
+
+export function SkillsCarousel(props: SkillsCarouselProps) {
   const skills: Skills[] = ["typescript", "javascript", "nuxt", "deno"];
   const carouselRoot = createRef();
   const options: EmblaOptionsType = { loop: true, active: true };
@@ -15,8 +18,12 @@ export function SkillsCarousel() {
   }, []);
 
   return (
-    <div class="skills-carousel overflow-hidden" ref={carouselRoot}>
-      <div class="skills-carousel-container grid grid-flow-col grid-auto-cols-[30%]">
+    <div
+      class="skills-carousel overflow-hidden"
+      className={props.class}
+      ref={carouselRoot}
+    >
+      <div class="skills-carousel-container grid grid-flow-col grid-auto-cols-[30%] [&_span]:font-bold [&_span]:text-gray-800 [&_span]:block [&_span]:mt-3.2">
         {skills.map((skill) => (
           <SkillCard class="skills-carousel-slide" skill={skill} />
         ))}

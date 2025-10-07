@@ -24,7 +24,7 @@ export default defineConfig({
     }),
   ],
   rules: [
-    [/^clip-path-\[(.+)\]$/, ([, d]) => ({ 'clip-path': d  })]
+    [/^clip-path-\[(.+)\]$/, ([, d]) => ({ "clip-path": d })],
   ],
   shortcuts: {
     "header-base":
@@ -48,4 +48,21 @@ export default defineConfig({
       },
     };
   },
+  safelist: [
+    "[&_span]:text-white",
+    "[&_span]:font-bold",
+    "[&>a:hover]:brightness-[0.8]",
+    "[&_p]:text-gray-400",
+    "[&_p]:w-[245px]",
+    "[&_p]:m-[0,auto]",
+    "md:[&_p]:m-unset",
+    "[&_strong]:block",
+    "[&_strong]:font-size-[5rem]",
+    "[&_strong]:text-white",
+    "[&_strong]:m-[-0.6rem 0]",
+    "before:content-['']",
+    "before:absolute",
+    "before:z-9999",
+    "[&>h2:not(:last-child)]:mb-[25px]",
+  ],
 });

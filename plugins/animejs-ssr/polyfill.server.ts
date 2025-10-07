@@ -271,5 +271,4 @@ export const animate = serverFallback.animate;
 export const createTimeline = serverFallback.createTimeline;
 export const createTimer = serverFallback.createTimer;
 export const utils = serverFallback.utils;
-export const svg = serverFallback.svg
-
+export const svg = serverFallback.svg;

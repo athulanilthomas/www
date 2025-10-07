@@ -1,83 +1,83 @@
-export const techs =  {
+export const techs = {
   "frontend": {
     "title": "Front-end Engineering Design",
     "items": [
       {
         "label": "Vue JS",
-        "key": "vue"
+        "key": "vue",
       },
       {
         "label": "Nuxt JS",
-        "key": "nuxt"
+        "key": "nuxt",
       },
       {
         "label": "Fresh",
-        "key": "fresh"
-      }
-    ]
+        "key": "fresh",
+      },
+    ],
   },
   "build": {
     "title": "Build Tools",
     "items": [
       {
         "label": "Vite",
-        "key": "vite"
+        "key": "vite",
       },
       {
         "label": "Webpack",
-        "key": "webpack"
+        "key": "webpack",
       },
       {
         "label": "Turborepo",
-        "key": "turborepo"
-      }
-    ]
+        "key": "turborepo",
+      },
+    ],
   },
   "backend": {
     "title": "Back-end",
     "items": [
       {
         "label": "Node",
-        "key": "node"
+        "key": "node",
       },
       {
         "label": "Deno",
-        "key": "deno"
-      }
-    ]
+        "key": "deno",
+      },
+    ],
   },
   "languages": {
     "title": "Languages",
     "items": [
       {
         "label": "JavaScript",
-        "key": "javascript"
+        "key": "javascript",
       },
       {
         "label": "TypeScript",
-        "key": "typescript"
+        "key": "typescript",
       },
       {
         "label": "Python",
-        "key": "python"
-      }
-    ]
+        "key": "python",
+      },
+    ],
   },
   "devops": {
     "title": "Devops",
     "items": [
       {
         "label": "Github Actions",
-        "key": "github"
+        "key": "github",
       },
       {
         "label": "Docker",
-        "key": "docker"
+        "key": "docker",
       },
       {
         "label": "Nginx",
-        "key": "nginx"
-      }
-    ]
-  }
-}
+        "key": "nginx",
+      },
+    ],
+  },
+};
