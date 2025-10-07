@@ -23,6 +23,9 @@ export default defineConfig({
       fonts: { sans: "Raleway" },
     }),
   ],
+  rules: [
+    [/^clip-path-\[(.+)\]$/, ([, d]) => ({ 'clip-path': d  })]
+  ],
   shortcuts: {
     "header-base":
       "flex items-center overflow-hidden overflow-x-visible position-fixed bg-[rgba(33,31,35,0.35)] backdrop-blur-[20px] rounded-[6.25rem] px-[3.25rem] py-[1.375rem]",

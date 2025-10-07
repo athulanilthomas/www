@@ -29,6 +29,7 @@
     "@iconify-json/logos": "npm:@iconify-json/logos",
     "embla-carousel": "npm:embla-carousel",
     "animejs": "https://esm.sh/animejs",
+    "path": "jsr:@std/path",
     "vite": "npm:vite@^7.1.3"
   },
   "compilerOptions": {

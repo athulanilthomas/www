@@ -21,6 +21,7 @@
     "jsr:@std/json@^1.0.2": "1.0.2",
     "jsr:@std/jsonc@1": "1.0.2",
     "jsr:@std/media-types@1": "1.1.0",
+    "jsr:@std/path@*": "1.1.2",
     "jsr:@std/path@1": "1.1.2",
     "jsr:@std/path@^1.1.1": "1.1.2",
     "jsr:@std/semver@1": "1.0.5",
@@ -1747,6 +1748,7 @@
     "dependencies": [
       "jsr:@fresh/core@^2.1.0",
       "jsr:@fresh/plugin-vite@^1.0.3",
+      "jsr:@std/path@*",
       "npm:@iconify-json/grommet-icons@*",
       "npm:@iconify-json/logos@*",
       "npm:@preact/signals@^2.3.1",
