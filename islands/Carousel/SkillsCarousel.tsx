@@ -27,7 +27,7 @@ export function SkillsCarousel(props: SkillsCarouselProps) {
       className={props.class}
       ref={carouselRoot}
     >
-      <div class="skills-carousel-container grid grid-flow-col grid-auto-cols-[65%] xl:grid-auto-cols-[35%] select-none [&_span]:font-bold [&_span]:text-gray-800 [&_span]:block [&_span]:mt-3.2 cursor-grab active:cursor-grabbing">
+      <div class="skills-carousel-container grid grid-flow-col grid-auto-cols-[65%] xl:grid-auto-cols-[30%] select-none [&_span]:font-bold [&_span]:text-gray-800 [&_span]:block [&_span]:mt-3.2 cursor-grab active:cursor-grabbing">
         {skills.map((skill) => (
           <SkillCard class="skills-carousel-slide" skill={skill} />
         ))}
