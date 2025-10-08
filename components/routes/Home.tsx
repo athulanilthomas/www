@@ -12,10 +12,10 @@ export function Home() {
         <section class="text-align-center md:text-align-initial flex flex-col md:flex-row-reverse items-center justify-center md:justify-between md:mt-24 2xl:mt-40 md:py-0 md:px-26 2xl:py-0 2xl:px-50">
           <Avatar class="w-40 md:w-100 sm:pt-25" />
           <div class="m-1.05 md:m-unset md:w-120">
-            <h1 class="text-white text-4xl md:text-7xl mt-10 ">
+            <h1 class="text-white text-4xl md:text-19.52 leading-normal mt-10 ">
               Hi, I’m Athul
             </h1>
-            <p class="mt-5.5 text-gray-400 line-height-normal leading-7.5 md:leading-8 [&_span]:text-white [&_span]:font-bold">
+            <p class="mt-5.5 text-gray-500 line-height-normal leading-7.5 md:leading-8 [&_span]:text-white [&_span]:font-bold">
               During my <span>6 years</span> as{" "}
               <span>Front-End Software Engineer</span>, My role has extended
               beyond coding to effective communication with various departments,
@@ -34,14 +34,14 @@ export function Home() {
           </div>
         </section>
 
-        <section class="mt-61 flex items-center gap-32 ps-26 overflow-hidden xl:gap-8 [&_p]:text-gray-400 [&_p]:w-[245px] [&_p]:m-[0,auto] md:[&_p]:m-unset [&_strong]:block [&_strong]:font-size-[5rem] [&_strong]:text-white [&_strong]:m-[-0.6rem 0]">
-          <div class="w-100% md:w-16% text-align-center md:text-align-initial relative before:content-[''] before:absolute before:z-99999">
+        <section class="mt-61 md:flex items-center gap-32 md:ps-26 overflow-hidden xl:gap-8 [&_p]:text-gray-500 [&_p]:w-[245px] [&_p]:mx-auto [&_p]:my-0 md:[&_p]:m-unset [&_strong]:block [&_strong]:font-size-[5rem] [&_strong]:text-white [&_strong]:m-[-0.6rem 0]">
+          <div class="w-100% md:w-16% text-align-center md:text-align-initial relative before:content-[''] before:absolute before:z-9999">
             <p>6 years of</p>
             <strong>XP</strong>
             <p>working with JS universe</p>
           </div>
-          <SkillsCarousel class="w-100% mx-3.438rem my-2.125rem xl:m-unset" />
-          <div>
+          <div class="overflow-hidden">
+            <SkillsCarousel class="w-100% mx-3.438rem my-2.125rem xl:m-unset" />
           </div>
         </section>
 
@@ -52,8 +52,6 @@ export function Home() {
             <h2 class="text-[#00AD61]">Vue JS</h2>
           </div>
         </section>
-
-        {/* <SkillsCarousel /> */}
       </main>
     </div>
   );
