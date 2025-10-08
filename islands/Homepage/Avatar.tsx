@@ -9,8 +9,11 @@ export interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export function Avatar(props: AvatarProps) {
-  const root = useRef(null);
-  const scope = useRef<Scope>(null);
+  const root = useRef<HTMLDivElement | null>(null);
+  const scope = useRef<Scope | null>(null);
+
+  const idRef = useRef(`blob-${Math.random().toString(36).slice(2, 9)}`);
+  const shapeId = `${idRef.current}-shape`;
 
   useEffect(() => {
     scope.current = createScope({ root }).add((_self) => {
@@ -37,12 +40,10 @@ export function Avatar(props: AvatarProps) {
       }
 
       function animatePoints() {
-        const points = generatePoints();
-
-        animate("#clipPathShape", {
-          d: points,
+        animate(`#${shapeId}`, {
+          d: generatePoints(),
           ease: "easeInOutQuad",
-          duration: 800,
+          duration: 2000,
           loop: false,
           onComplete: animatePoints,
         });
@@ -54,35 +55,37 @@ export function Avatar(props: AvatarProps) {
     return () => scope.current?.revert();
   }, []);
 
-  // Return any prerenderable JSX here which makes sense for your island
+  const svgViewBox = "-60 -60 500 500";
+
   return (
-    <div ref={root} class={props.class}>
+    <div ref={root} class={`${props.class}`}>
       <svg
-        class="block object-contain md:object-cover"
-        width="0"
-        height="0"
-        overflow="visible"
-        viewBox="-100 -100 700 700"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox={svgViewBox}
+        preserveAspectRatio="xMidYMid slice"
+        class="w-full h-auto block"
+        role="img"
+        aria-label="avatar"
       >
         <defs>
-          <clipPath id="blob" clipPathUnits="userSpaceOnUse">
+          <clipPath id={idRef.current} clipPathUnits="userSpaceOnUse">
             <path
-              id="clipPathShape"
+              id={shapeId}
               d="M183.449 13.313C236.026 5.33956 294.336 -12.7022 336.794 19.3164C382.15 53.5196 397.159 115.906 394.755 172.662C392.446 227.192 363.273 275.303 324.334 313.547C285.803 351.389 237.121 386.199 183.449 380.194C132.733 374.519 104.191 323.886 70.919 285.191C41.4549 250.925 5.08631 217.854 5.00017 172.662C4.91394 127.416 36.7407 89.8386 70.4893 59.7022C102.052 31.5177 141.612 19.6577 183.449 13.313Z"
             />
           </clipPath>
         </defs>
-      </svg>
-
-      <div>
-        <img
-          src="https://avatars.githubusercontent.com/u/30122216?s=400&u=205c4e5b007db46a47857bcbb4aff49adf6deb6c&v=4"
-          class="block object-contain md:object-cover clip-path-[url(#blob)]"
-          width="400"
-          height="400"
-          alt=""
+        <image
+          href={props.src ?? "https://avatars.githubusercontent.com/u/30122216?s=400"}
+          x="-60"
+          y="-60"
+          width="500"
+          height="500"
+          preserveAspectRatio="xMidYMid slice"
+          clip-path={`url(#${idRef.current})`}
+          role="presentation"
         />
-      </div>
+      </svg>
     </div>
   );
 }
