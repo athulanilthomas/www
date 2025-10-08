@@ -10,7 +10,11 @@ export interface SkillsCarouselProps extends HTMLAttributes<HTMLDivElement> {
 export function SkillsCarousel(props: SkillsCarouselProps) {
   const skills: Skills[] = ["typescript", "javascript", "nuxt", "deno"];
   const carouselRoot = createRef();
-  const options: EmblaOptionsType = { loop: false, align: 'start', dragFree: true };
+  const options: EmblaOptionsType = {
+    loop: false,
+    align: "start",
+    dragFree: true,
+  };
 
   useEffect(() => {
     const slider = EmblaCarousel(carouselRoot.current, options);

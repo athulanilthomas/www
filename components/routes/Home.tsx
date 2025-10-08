@@ -1,6 +1,7 @@
 import { Head } from "fresh/runtime";
 import { Avatar } from "../../islands/Homepage/Avatar.tsx";
 import { SkillsCarousel } from "../../islands/Carousel/SkillsCarousel.tsx";
+import { TechCarousel } from "../../islands/Carousel/TechCarousel.tsx";
 
 export function Home() {
   return (
@@ -51,6 +52,11 @@ export function Home() {
             <h2 class="text-[#26E097]">Deno</h2>
             <h2 class="text-[#00AD61]">Vue JS</h2>
           </div>
+        </section>
+
+        <section class="mb-27.5">
+          <h2 class="text-size-[2rem] xl:text-size-6xl text-gray-300 text-align-center max-w-[320px] xl:max-w-[650px] mx-auto my-0">The technologies I’ve been using...</h2>
+          <TechCarousel class="mt-15.5"/>
         </section>
       </main>
     </div>

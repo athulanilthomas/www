@@ -61,9 +61,9 @@ export function Avatar(props: AvatarProps) {
     <div ref={root} class={`${props.class}`}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox={svgViewBox}
         preserveAspectRatio="xMidYMid slice"
-        class="w-full h-auto block"
+        viewBox={svgViewBox}
+        class="w-full h-full h-auto block"
         role="img"
         aria-label="avatar"
       >
