@@ -4,7 +4,7 @@ import { useEffect } from "preact/hooks";
 import { techs } from "../../data/tech.ts";
 
 import EmblaCarousel, { EmblaOptionsType } from "embla-carousel";
-import type { HTMLAttributes } from 'preact'
+import type { HTMLAttributes } from "preact";
 
 type TechGroup = { title: string; items: Tech[] };
 
@@ -26,10 +26,17 @@ export function TechCarousel(props: TechCarouselProps) {
   }, []);
 
   return (
-    <div class={`tech-carousel overflow-hidden ${props.class}`} ref={carouselRoot}>
+    <div
+      class={`tech-carousel overflow-hidden ${props.class}`}
+      ref={carouselRoot}
+    >
       <div class="tech-carousel-container grid grid-flow-col gap-x-20 grid-auto-cols-70% xl:grid-auto-cols-28% touch-pan-y touch-pinch-zoom cursor-grab active:cursor-grabbing select-none">
         {technologies.map((tech) => (
-          <TechCard title={tech.title} items={tech.items} class="last:mr-12 xl:last:mr-23 min-w-76.252 xl:w-130 h-max px-8.5 py-4.9 border-color-[#232323] border-width-1 border-solid rounded-3" />
+          <TechCard
+            title={tech.title}
+            items={tech.items}
+            class="last:mr-12 xl:last:mr-23 min-w-76.252 xl:w-130 h-max px-8.5 py-4.9 border-color-[#232323] border-width-1 border-solid rounded-3"
+          />
         ))}
       </div>
     </div>

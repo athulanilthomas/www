@@ -55,8 +55,10 @@ export function Home() {
         </section>
 
         <section class="mb-27.5">
-          <h2 class="text-size-[2rem] xl:text-size-6xl text-gray-300 text-align-center max-w-[320px] xl:max-w-[650px] mx-auto my-0">The technologies I’ve been using...</h2>
-          <TechCarousel class="mt-15.5"/>
+          <h2 class="text-size-[2rem] xl:text-size-6xl text-gray-300 text-align-center max-w-[320px] xl:max-w-[650px] mx-auto my-0">
+            The technologies I’ve been using...
+          </h2>
+          <TechCarousel class="mt-15.5" />
         </section>
       </main>
     </div>

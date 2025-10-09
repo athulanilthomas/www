@@ -76,7 +76,8 @@ export function Avatar(props: AvatarProps) {
           </clipPath>
         </defs>
         <image
-          href={props.src ?? "https://avatars.githubusercontent.com/u/30122216?s=400"}
+          href={props.src ??
+            "https://avatars.githubusercontent.com/u/30122216?s=400"}
           x="-60"
           y="-60"
           width="500"
