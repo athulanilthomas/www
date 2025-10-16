@@ -15,6 +15,8 @@ export function Avatar(props: AvatarProps) {
   const idRef = useRef(`blob-${Math.random().toString(36).slice(2, 9)}`);
   const shapeId = `${idRef.current}-shape`;
 
+  let animatePoints: (() => void) | null = null;
+
   useEffect(() => {
     scope.current = createScope({ root }).add((_self) => {
       const shapes = [
@@ -39,20 +41,25 @@ export function Avatar(props: AvatarProps) {
         return shapes[point];
       }
 
-      function animatePoints() {
-        animate(`#${shapeId}`, {
-          d: generatePoints(),
-          ease: "easeInOutQuad",
-          duration: 2000,
-          loop: false,
-          onComplete: animatePoints,
-        });
-      }
+      animatePoints = () => {
+        if (animatePoints) {
+          animate(`#${shapeId}`, {
+            d: generatePoints(),
+            ease: "easeInOutQuad",
+            duration: 2000,
+            loop: false,
+            onComplete: animatePoints,
+          });
+        }
+      };
 
-      animatePoints();
+      if (animatePoints) animatePoints();
     });
 
-    return () => scope.current?.revert();
+    return () => {
+      animatePoints = null;
+      scope.current?.revert();
+    };
   }, []);
 
   const svgViewBox = "-60 -60 500 500";
