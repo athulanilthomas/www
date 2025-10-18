@@ -1,6 +1,6 @@
 import { App, staticFiles } from "fresh";
 import { define, type State } from "./utils.ts";
-import 'virtual:uno.css'
+import "virtual:uno.css";
 
 export const app = new App<State>();
 

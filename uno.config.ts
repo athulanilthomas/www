@@ -1,19 +1,12 @@
-import {
-  defineConfig,
-  presetAttributify,
-  presetIcons,
-  presetWebFonts,
-  presetWind4,
-} from "unocss";
+import { defineConfig, presetIcons, presetWebFonts, presetWind4 } from "unocss";
 import { presetScrollbar } from "unocss-preset-scrollbar";
 
 export default defineConfig({
   presets: [
-    presetAttributify({/* preset options */}),
     presetWind4({
       preflights: {
         reset: true,
-        theme: "on-demand",
+        theme: true,
       },
     }),
     presetScrollbar(),
