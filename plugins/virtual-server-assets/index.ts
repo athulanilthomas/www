@@ -14,7 +14,7 @@ export default function virtualServerAssets(): Plugin {
 
   return {
     name: "vite:virtual-server-assets",
-
+  
     resolveId(id) {
       return id === VIRTUAL_MODULE_ID ? RESOLVED_ID : undefined;
     },
@@ -29,9 +29,8 @@ export default function virtualServerAssets(): Plugin {
         return `export const serverStyleSheet = []`;
       }
 
-      const manifest = (await import(MANIFEST_PATH, {
-        with: { type: "json" },
-      }))?.default;
+      const manifestContent = await Deno.readTextFile(MANIFEST_PATH)
+      const manifest = JSON.parse(manifestContent)
 
       const cssFiles = manifest?.["fresh:server_entry"]?.css ?? [];
       const css = cssFiles.at(0);
