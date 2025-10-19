@@ -13,6 +13,6 @@ export default defineConfig({
     virtualServerAssets(),
   ],
   build: {
-    emptyOutDir: true
-  }
+    emptyOutDir: true,
+  },
 });

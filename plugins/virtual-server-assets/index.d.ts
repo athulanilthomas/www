@@ -1,4 +1,4 @@
 declare module "virtual:server-styles" {
-    const serverStyleSheet: string
-    export { serverStyleSheet }
+  const serverStyleSheet: string;
+  export { serverStyleSheet };
 }
