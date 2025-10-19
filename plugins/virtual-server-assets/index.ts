@@ -1,4 +1,3 @@
-import { resolve } from "path";
 // deno-lint-ignore no-unversioned-import
 import { exists } from "jsr:@std/fs/exists";
 
@@ -7,10 +6,7 @@ import type { Plugin } from "vite";
 export default function virtualServerAssets(): Plugin {
   const VIRTUAL_MODULE_ID = "virtual:server-styles";
   const RESOLVED_ID = `\0${VIRTUAL_MODULE_ID}`;
-  const MANIFEST_PATH = resolve(
-    Deno.cwd(),
-    "_fresh/server/.vite/manifest.json",
-  );
+  const MANIFEST_PATH = [Deno.cwd(), "_fresh/server/.vite/manifest.json"].join('/')
 
   return {
     name: "vite:virtual-server-assets",
