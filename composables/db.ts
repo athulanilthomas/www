@@ -1,4 +1,4 @@
-const db = await Deno.openKv("db/kv.db");
+const db = await Deno.openKv();
 
 export async function updateAsset(input: string) {
   await db.set(["asset_id"], input);
