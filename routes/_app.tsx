@@ -1,11 +1,18 @@
 import { define } from "../utils.ts";
 import { asset } from "fresh/runtime";
 
-export default define.page(function App({ Component, state }) {
-  function getSSRAssetLink() {
-    const assetFile = decodeURIComponent(state.ssrAsset?.file ?? '')
+import { getAsset } from "../composables/db.ts";
 
-    return assetFile ? <link rel="stylesheet" href={asset(assetFile)}></link> : "";
+export default define.page(function App({ Component }) {
+  async function getSSRAssetLink() {
+    const assetId = await getAsset();
+    const assetFile = decodeURIComponent(assetId ?? "");
+
+    if (assetFile) {
+      return <link rel="preload" href={asset(assetFile)} as="style"></link>;
+    }
+
+    return "";
   }
 
   return (
