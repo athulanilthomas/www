@@ -6,7 +6,7 @@
 .env.local
 
 # DB files
-db/*
+db/kv*
 !db/.gitkeep
 
 # Fresh build directory
