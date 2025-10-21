@@ -7,6 +7,7 @@
 
 # DB files
 db/*
+!db/.gitkeep
 
 # Fresh build directory
 _fresh/
