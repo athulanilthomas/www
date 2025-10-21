@@ -4,8 +4,7 @@
     "check": "deno fmt --check . && deno lint . && deno check",
     "dev": "vite",
     "build": "vite build",
-    "pre-start": "deno run --allow-read  --allow-write --allow-env --allow-net --unstable-kv build/post.ts",
-    "start": "deno task pre-start && deno serve --unstable-kv -A  _fresh/server.js",
+    "start": "deno serve --unstable-kv -A loader/boot.ts",
     "update": "deno run -A -r jsr:@fresh/update ."
   },
   "lint": {
