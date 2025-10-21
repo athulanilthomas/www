@@ -5,6 +5,9 @@
 .env.production.local
 .env.local
 
+# DB files
+db/*
+
 # Fresh build directory
 _fresh/
 # npm + other dependencies

@@ -13,4 +13,6 @@ if (manifestExists) {
   const css = cssFiles.at(0);
 
   await updateAsset(css);
+
+  console.log("Pushed Asset ID Successfully ✅");
 }
