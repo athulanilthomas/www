@@ -1,12 +1,13 @@
 export function Header() {
   const navLinks = [
-    { href: "/", label: "home" },
+    { href: "/", label: "home", clientNav: false },
     {
       href: "/experience",
       label: "experience",
       partial: "/partials/experience",
+      clientNav: true
     },
-    { href: "/projects", label: "projects", partial: "/partials/projects" },
+    { href: "/projects", label: "projects", partial: "/partials/projects", clientNav: true },
   ];
 
   const socialLinks = [
@@ -36,6 +37,7 @@ export function Header() {
                   href={link.href}
                   class="data-[current]:text-primary hover:brightness-[0.8]"
                   f-partial={link.partial}
+                  f-client-nav={link.clientNav}
                 >
                   {link.label}
                 </a>

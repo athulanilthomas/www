@@ -15,7 +15,7 @@ export function Experience() {
           {" />"}
         </p>
         <a
-          class="w-46 h-11.5 bg-white text-gray-900 text-center py-3 px-10 rounded-25 font-bold hover:filter-brightness-[0.8]"
+          class="w-46 h-11.5 text-4 bg-white text-gray-900 text-center py-3 px-10 rounded-25 font-bold hover:filter-brightness-[0.8]"
           href="#"
           download
         >

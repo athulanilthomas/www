@@ -64,5 +64,6 @@ export default defineConfig({
     "[&_p]:mt-4",
     "[&_p]:leading-7.5",
     "[&_p]:text-gray-400",
+    "xl:text-[1.5rem]"
   ],
 });

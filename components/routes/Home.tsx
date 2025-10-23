@@ -25,8 +25,8 @@ export function Home() {
             </p>
             <div class="mt-14 flex flex-col xl:flex-row justify-center xl:justify-start items-center gap-3.5 xl:gap-7 [&>a:hover]:brightness-[0.8]">
               <a
-                class="w-46 h-11.5 bg-white text-gray-900 text-align-center px-10 py-3 rounded-25 font-bold"
-                href=""
+                class="w-46 h-11.5 text-4 bg-white text-gray-900 text-align-center px-10 py-3 rounded-25 font-bold"
+                href="#"
               >
                 Download CV
               </a>
