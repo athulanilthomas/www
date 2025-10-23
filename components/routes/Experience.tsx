@@ -1,4 +1,5 @@
 import { Head } from "fresh/runtime";
+import { experience } from "../../data/experience.ts";
 
 export function Experience() {
   return (
@@ -15,62 +16,40 @@ export function Experience() {
         </p>
         <a
           class="w-46 h-11.5 bg-white text-gray-900 text-center py-3 px-10 rounded-25 font-bold hover:filter-brightness-[0.8]"
-          href="/downloads/lucasviga-frontend-se.pdf"
+          href="#"
           download
         >
           Download CV
         </a>
       </header>
 
-      <ul class="xl:max-w-[1120px] 2xl:max-w-[1520px] mt-25 mx-8.5 mb-16 xl:my-25 xl:mx-auto">
-        <li>
-          <div className="experience-details">
-            <h2>Front-end Software Engineer</h2>
-            <span>Contract</span>
-            <time>Jan 2020 - Present</time>
-            <address>Manaus, AM, Brazil</address>
-          </div>
+      <ul class="xl:max-w-[1120px] 2xl:max-w-[1520px] mt-25 mx-8.5 mb-16 xl:my-25 xl:mx-auto [&>li:not(:last-child)]:mb-8 xl:[&>li:not(:last-child)]:mb-22.5 ">
+        {experience.map((exp, idx) => (
+          <li
+            key={`${idx}_${exp.period}`}
+            class="w-100% flex flex-col xl:flex-row gap-15.5 xl:gap-unset justify-start bg-[rgba(33,31,35,0.35)] rounded-10 py-17.5 px-9.5"
+          >
+            <div className="experience-details xl:w-40%">
+              <h2 class="text-white font-semibold font-size-4 xl:font-size-7">
+                {exp.role}
+              </h2>
+              <span class="my-3 mx-0 text-primary block font-size-5.5">
+                {exp.role_type}
+              </span>
+              <time class="text-gray-400">{exp.period}</time>
+              <address class="text-gray-400">{exp.place}</address>
+            </div>
 
-          <div className="experience-activity">
-            <h3>Grupo Clickip Tecnologia</h3>
-            <p>Click IP is a Internet provider holding.</p>
-
-            <p>
-              • Developed React web app to avoid overloading the call center
-              during Internet issues. (Vite, Zustand, Chakra UI). On average, we
-              reduced support tickets by 35% during a network issue.
-            </p>
-            <p>
-              • Developed React web app to document all router models used by
-              the company. (Next.JS, Zustand, Tailwind). Reducing the use of
-              spreadsheets.
-            </p>
-            <p>
-              • Developed React Native app for customers to get Bills, see
-              contracts info, data used, and report payments. (React Native CLI,
-              Styled Components, Context API).
-            </p>
-            <p>
-              • Helped the team to implement Unit Test with Jest and React
-              Testing Library for Front-End applications.
-            </p>
-
-            <p>Main activities:</p>
-            <p>
-              • Led the development team Squad, and mentored Front-End juniors
-              developers. (JavaScript, React JS and React Native).
-            </p>
-            <p>• Designed interfaces for web and mobile apps using Figma.</p>
-            <p>
-              • Published the first company&apos;s React Native app on Google
-              Play and App Store.
-            </p>
-            <p>
-              • Automated deployments for frontend and backend projects using
-              GitHub Actions.
-            </p>
-          </div>
-        </li>
+            <div className="experience-activity xl:w-60% [&_p]:mt-4 [&_p]:leading-7.5 [&_p]:text-gray-500">
+              <h3 class="font-size-5.5 font-semibold text-primary block font-size-5.5">
+                {exp.company}
+              </h3>
+              {exp.responsibilities.map((resp, idx) => (
+                <p key={idx}>• {resp.trim()}</p>
+              ))}
+            </div>
+          </li>
+        ))}
       </ul>
     </main>
   );

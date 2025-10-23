@@ -59,5 +59,10 @@ export default defineConfig({
     "before:absolute",
     "before:z-9999",
     "[&>h2:not(:last-child)]:mb-[25px]",
+    "[&>li:not(:last-child)]:mb-8",
+    "xl:[&>li:not(:last-child)]:mb-22.5",
+    "[&_p]:mt-4",
+    "[&_p]:leading-7.5",
+    "[&_p]:text-gray-400",
   ],
 });
