@@ -1,6 +1,6 @@
 export function Header() {
   const navLinks = [
-    { href: "/", label: "home", clientNav: false },
+    { href: "/", label: "home", clientNav: true },
     {
       href: "/experience",
       label: "experience",

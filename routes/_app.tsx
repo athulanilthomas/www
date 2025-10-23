@@ -16,18 +16,21 @@ export default define.page(async function App({ Component }) {
   }
 
   return (
-    <html lang="en">
+    <html lang="en" class="scrollbar-gutter-[stable]">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link rel="preconnect" href="https://avatars.githubusercontent.com">
-        </link>
+        <link rel="preconnect" href="https://avatars.githubusercontent.com"></link>
+
+        <script>
+          console?.log?.('haiiiii')
+        </script>
 
         {await getSSRAssetLink()}
       </head>
-      <body class="bg-[#0c0c0d] scrollbar-gutter-[stable]" f-client-nav>
+      <body class="bg-[#0c0c0d]" f-client-nav>
         <Component />
       </body>
     </html>
