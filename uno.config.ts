@@ -18,6 +18,7 @@ export default defineConfig({
   ],
   rules: [
     [/^clip-path-\[(.+)\]$/, ([, d]) => ({ "clip-path": d })],
+    [/^scrollbar-gutter-\[(.+)\]$/, ([, d]) => ({ "scrollbar-gutter": d })],
   ],
   shortcuts: {
     "header-base":

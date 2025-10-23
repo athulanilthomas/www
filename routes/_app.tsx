@@ -16,7 +16,7 @@ export default define.page(async function App({ Component }) {
   }
 
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,7 +26,7 @@ export default define.page(async function App({ Component }) {
 
         {await getSSRAssetLink()}
       </head>
-      <body class="bg-[#0c0c0d]" f-client-nav>
+      <body class="bg-[#0c0c0d] scrollbar-gutter-[stable]" f-client-nav>
         <Component />
       </body>
     </html>

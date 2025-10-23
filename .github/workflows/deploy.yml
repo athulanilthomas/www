@@ -32,5 +32,3 @@ jobs:
           project: "athulanil-portfolio"
           entrypoint: "./loader/boot.ts"
           root: ""
-          
-          

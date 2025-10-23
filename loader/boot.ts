@@ -1,6 +1,6 @@
 import server from "../_fresh/server.js";
 import warmup from "./warmup.ts";
 
-await warmup()
+await warmup();
 
-export default server
+export default server;
