@@ -34,9 +34,9 @@ export function SkillCard({ skill, class: cls }: SkillCardProps) {
     <div
       class={`skill-card-base ${
         skills[skill].background
-      } ${cls} hover:scale-102 transition duration-300 ease-in-out`}
+      } ${cls} group/card`}
     >
-      <div class={`${skills[skill].logo} text-4xl`} />
+      <div class={`${skills[skill].logo} text-4xl group-hover/card:scale-104 transition duration-200 ease-in-out`} />
       <span class="font-bold mt-3">{skills[skill].label}</span>
     </div>
   );

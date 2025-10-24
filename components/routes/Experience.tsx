@@ -37,7 +37,7 @@ export function Experience() {
                 {exp.role_type}
               </span>
               <time class="text-gray-400">{exp.period}</time>
-              <address class="text-gray-400">{exp.place}</address>
+              <address class="text-gray-400 not-italic">{exp.place}</address>
             </div>
 
             <div className="experience-activity xl:w-60% [&_p]:mt-4 [&_p]:leading-7.5 [&_p]:text-gray-500">

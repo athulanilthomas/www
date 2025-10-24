@@ -1,4 +1,4 @@
-import { animate, createScope, utils } from "animejs";
+import { animate, createScope, cubicBezier, utils } from "animejs";
 import { useEffect, useRef } from "preact/hooks";
 
 import type { HTMLAttributes } from "preact";
@@ -45,8 +45,8 @@ export function Avatar(props: AvatarProps) {
         if (animatePoints) {
           animate(`#${shapeId}`, {
             d: generatePoints(),
-            ease: "easeInOutQuad",
-            duration: 2000,
+            ease: cubicBezier(0.7,0.1,0.5,0.9),
+            duration: 1250,
             loop: false,
             onComplete: animatePoints,
           });

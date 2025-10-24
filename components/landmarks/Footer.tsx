@@ -7,12 +7,12 @@ export function Footer() {
     },
     {
       icon: "i-grommet-icons:linkedin",
-      href: "https://github.com/athulanilthomas",
+      href: "https://www.linkedin.com/in/athul-anil-thomas",
     },
-    { icon: "i-grommet-icons:x", href: "https://github.com/athulanilthomas" },
+    { icon: "i-grommet-icons:x", href: "https://twitter.com/AthulAnilThoma2" },
     {
       icon: "i-grommet-icons:spotify",
-      href: "https://github.com/athulanilthomas",
+      href: "https://open.spotify.com/user/31blayt3d6grdk7jtlm6zlsqp4oa",
     },
   ];
 

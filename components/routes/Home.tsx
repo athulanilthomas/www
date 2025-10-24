@@ -11,7 +11,7 @@ export function Home() {
       </Head>
       <main class="min-h-100%">
         <section class="text-align-center xl:text-align-initial flex flex-col xl:flex-row-reverse items-center justify-center xl:justify-between xl:mt-24 2xl:mt-40 xl:py-0 xl:px-26 2xl:py-0 2xl:px-50">
-          <Avatar class="sm:pt-25 w-auto xl:w-26rem inline-block" />
+          <Avatar class="sm:pt-10 w-auto xl:w-30rem xl:h-auto inline-block" />
           <div class="my-0 mx-10.5 xl:m-unset xl:w-120">
             <h1 class="text-white text-4xl xl:text-19.52 leading-normal mt-10 ">
               Hi, I’m Athul
