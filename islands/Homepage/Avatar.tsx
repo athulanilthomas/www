@@ -1,5 +1,6 @@
-import { animate, createScope, cubicBezier, utils } from "animejs";
+import { asset } from "fresh/runtime";
 import { useEffect, useRef } from "preact/hooks";
+import { animate, createScope, cubicBezier, utils } from "animejs";
 
 import type { HTMLAttributes } from "preact";
 import type { Scope } from "animejs";
@@ -45,7 +46,7 @@ export function Avatar(props: AvatarProps) {
         if (animatePoints) {
           animate(`#${shapeId}`, {
             d: generatePoints(),
-            ease: cubicBezier(0.7,0.1,0.5,0.9),
+            ease: cubicBezier(0.7, 0.1, 0.5, 0.9),
             duration: 1250,
             loop: false,
             onComplete: animatePoints,
@@ -83,8 +84,7 @@ export function Avatar(props: AvatarProps) {
           </clipPath>
         </defs>
         <image
-          href={props.src ??
-            "https://avatars.githubusercontent.com/u/30122216?s=400"}
+          href={asset("/avatar.png")}
           x="-60"
           y="-60"
           width="500"

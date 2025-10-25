@@ -32,11 +32,13 @@ export interface SkillCardProps extends HTMLAttributes {
 export function SkillCard({ skill, class: cls }: SkillCardProps) {
   return (
     <div
-      class={`skill-card-base ${
-        skills[skill].background
-      } ${cls} group/card`}
+      class={`skill-card-base ${skills[skill].background} ${cls} group/card`}
     >
-      <div class={`${skills[skill].logo} text-4xl group-hover/card:scale-104 transition duration-200 ease-in-out`} />
+      <div
+        class={`${
+          skills[skill].logo
+        } text-4xl group-hover/card:scale-104 transition duration-200 ease-in-out`}
+      />
       <span class="font-bold mt-3">{skills[skill].label}</span>
     </div>
   );

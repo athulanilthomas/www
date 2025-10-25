@@ -5,9 +5,14 @@ export function Header() {
       href: "/experience",
       label: "experience",
       partial: "/partials/experience",
-      clientNav: true
+      clientNav: true,
     },
-    { href: "/projects", label: "projects", partial: "/partials/projects", clientNav: true },
+    {
+      href: "/projects",
+      label: "projects",
+      partial: "/partials/projects",
+      clientNav: true,
+    },
   ];
 
   const socialLinks = [

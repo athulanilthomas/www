@@ -1,12 +1,8 @@
-import { Head } from "fresh/runtime";
 import { experience } from "../../data/experience.ts";
 
 export function Experience() {
   return (
     <main>
-      <Head>
-        <title>Experience - Athul Anil Thomas</title>
-      </Head>
       <header class="flex flex-col items-center gap-9.5 mt-8rem xl:mt-12rem">
         <p class="text-center text-gray-300 max-w-[340px] xl:max-w-[640px] xl:text-[1.5rem] my-0 mx-auto line-height-[2rem] xl:line-height-[3rem] font-light">
           {"< "}

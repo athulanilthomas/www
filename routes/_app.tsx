@@ -22,11 +22,6 @@ export default define.page(async function App({ Component }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link rel="preconnect" href="https://avatars.githubusercontent.com"></link>
-
-        <script>
-          console?.log?.('haiiiii')
-        </script>
 
         {await getSSRAssetLink()}
       </head>
