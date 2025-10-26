@@ -132,6 +132,8 @@ const noOpTimer = () => ({
     Promise.resolve().then(() => callback && callback()),
 });
 
+const noOpCubicBezier = () => ({})
+
 const noOpAnimatable = () => ({
   // Methods
   revert: () => noOpAnimatable(),
@@ -262,6 +264,8 @@ const serverFallback = {
     currentTime: 0,
   },
 
+  cubicBezier: () => noOpCubicBezier(),
+
   // Animatable
   animatable: () => noOpAnimatable(),
 };
@@ -272,3 +276,4 @@ export const createTimeline = serverFallback.createTimeline;
 export const createTimer = serverFallback.createTimer;
 export const utils = serverFallback.utils;
 export const svg = serverFallback.svg;
+export const cubicBezier = serverFallback.cubicBezier

@@ -1,10 +1,15 @@
+import { Schema } from "../Schema.tsx"
 import { Avatar } from "../../islands/Homepage/Avatar.tsx";
 import { SkillsCarousel } from "../../islands/Carousel/SkillsCarousel.tsx";
 import { TechCarousel } from "../../islands/Carousel/TechCarousel.tsx";
 
-export function Home() {
+import type { State } from "../../utils.ts";
+
+export function Home({ state }: { state: State }) {
   return (
     <div>
+      <Schema {...state}/>
+
       <main class="min-h-100%">
         <section class="text-align-center xl:text-align-initial flex flex-col xl:flex-row-reverse items-center justify-center xl:justify-between xl:mt-24 2xl:mt-40 xl:py-0 xl:px-26 2xl:py-0 2xl:px-50">
           <Avatar class="sm:pt-10 w-auto xl:w-30rem xl:h-auto inline-block" />

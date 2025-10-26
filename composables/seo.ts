@@ -2,18 +2,19 @@ import { schema } from "../data/schema.ts";
 
 import type { Context } from "fresh";
 import type { SEO, State } from "../utils.ts";
-export type recognizedPaths = keyof typeof schema;
 
-type SEOResponse = { data: { seo: SEO | {} } }
+type SEOResponse = { data: { seo: SEO | Record<PropertyKey, never> } }
+type recognizedPath = keyof typeof schema;
 
-const isRecognisedPath = (path: string): path is recognizedPaths => {
+export const isRecognisedPath = (path: string): path is recognizedPath => {
   const paths = Object.keys(schema);
   return paths.includes(path);
 };
 
 export function useSEO(ctx: Context<State>): SEOResponse {
   const url = ctx.url;
-  const path = url.pathname;
+  const path = url.pathname.replace('/partials', "");
+  
   const response = { seo: isRecognisedPath(path) ? schema[path] : {}}
 
   return { data: response };
