@@ -12,7 +12,7 @@ export const config: RouteConfig = {
 export default define.page(function ProjectsPage(_ctx) {
   return (
     <Partial name="content">
-      <Projects />
+      <Projects state={_ctx.state}/>
     </Partial>
   );
 });
