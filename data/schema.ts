@@ -4,11 +4,11 @@ export const schema = {
     "description":
       "Explore the work of Athul Anil Thomas, a Front-End Software Engineer with 6+ years of experience building scalable and creative web apps using JavaScript, TypeScript, Vue.js, Nuxt, and Deno.",
     "openGraph": {
-      "og:title": "Athul Anil Thomas – Front-End Engineer",
-      "og:description":
+      "title": "Athul Anil Thomas – Front-End Engineer",
+      "description":
         "Front-End Developer skilled in JavaScript, TypeScript, Vue.js, and Deno.",
-      "og:url": "https://athulanilthomas.in",
-      "og:image": "https://athulanilthomas.in/meta-image-home.jpg",
+      "url": "https://athulanilthomas.in",
+      "image": "https://athulanilthomas.in/meta-image-home.jpg",
     },
     "twitter": {
       "card": "summary_large_image",
@@ -35,11 +35,11 @@ export const schema = {
     "description":
       "Discover Athul’s professional journey — from leading front-end teams at Alokin to building enterprise-grade solutions at Capgemini.",
     "openGraph": {
-      "og:title": "Experience – Athul Anil Thomas",
-      "og:description":
+      "title": "Experience – Athul Anil Thomas",
+      "description":
         "Career journey of a Front-End Engineer with experience at Capgemini and Alokin Software.",
-      "og:url": "https://athulanilthomas.in/experience",
-      "og:image": "https://athulanilthomas.in/meta-image-experience.jpg",
+      "url": "https://athulanilthomas.in/experience",
+      "image": "https://athulanilthomas.in/meta-image-experience.jpg",
     },
     "twitter": {
       "card": "summary_large_image",
@@ -75,15 +75,15 @@ export const schema = {
     },
   },
   "/projects": {
-    "title": "Projects | Athul Anil Thomas – SDKs & Front-End Creations",
+    "title": "Projects | Athul Anil Thomas",
     "description":
       "Explore the projects by Athul Anil Thomas, including a fully-typed Splitwise SDK built in TypeScript and other innovative front-end works.",
     "openGraph": {
-      "og:title": "Projects – Athul Anil Thomas",
-      "og:description":
+      "title": "Projects – Athul Anil Thomas",
+      "description":
         "Fully-typed Splitwise SDK and other front-end projects by Athul Anil Thomas.",
-      "og:url": "https://athulanilthomas.in/projects",
-      "og:image": "https://athulanilthomas.in/meta-image-projects.jpg",
+      "url": "https://athulanilthomas.in/projects",
+      "image": "https://athulanilthomas.in/meta-image-projects.jpg",
     },
     "twitter": {
       "card": "summary_large_image",
