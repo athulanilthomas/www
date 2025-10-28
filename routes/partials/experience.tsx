@@ -12,7 +12,7 @@ export const config: RouteConfig = {
 export default define.page(function ExperiencePage(_ctx) {
   return (
     <Partial name="content">
-      <Experience state={_ctx.state}/>
+      <Experience state={_ctx.state} />
     </Partial>
   );
 });

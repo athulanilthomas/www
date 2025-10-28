@@ -1,4 +1,4 @@
-import { Schema } from "../Schema.tsx"
+import { Schema } from "../Schema.tsx";
 import { projects } from "../../data/projects.ts";
 
 import { State } from "../../utils.ts";
@@ -6,7 +6,7 @@ import { State } from "../../utils.ts";
 export function Projects({ state }: { state: State }) {
   return (
     <main>
-      <Schema {...state}/>
+      <Schema {...state} />
 
       <ul class="px-8.5 py-0 xl:p-unset xl:max-w-1120px 2xl:max-w-1520px mt-8rem mx-0 mb-5rem xl:mt-12rem xl:mx-auto xl:mb-8.75rem 2xl:mt-15.625rem 2xl:mx-auto 2xl:mb-8.75rem">
         {projects.map((project) => (

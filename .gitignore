@@ -9,6 +9,9 @@
 db/kv*
 !db/.gitkeep
 
+# Sitemap files
+sitemap.xml
+
 # Fresh build directory
 _fresh/
 # npm + other dependencies
