@@ -1,17 +1,17 @@
 export function Header() {
   const navLinks = [
-    { href: "/", label: "home", clientNav: true },
+    { href: "/", label: "home", clientNav: false },
     {
       href: "/experience",
       label: "experience",
       partial: "/partials/experience",
-      clientNav: true,
+      clientNav: false,
     },
     {
       href: "/projects",
       label: "projects",
       partial: "/partials/projects",
-      clientNav: true,
+      clientNav: false,
     },
   ];
 

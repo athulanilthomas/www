@@ -26,7 +26,7 @@ export default define.page(async function App({ Component }) {
 
         {await getSSRAssetLink()}
       </head>
-      <body class="bg-[#0c0c0d]" f-client-nav>
+      <body class="bg-[#0c0c0d]">
         <Component />
       </body>
     </html>
