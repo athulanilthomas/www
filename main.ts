@@ -1,14 +1,15 @@
 /// <reference lib="deno.unstable" />
 
-import { App, staticFiles } from "fresh";
+import { App, staticFiles, trailingSlashes } from "fresh";
 import { type State } from "./utils.ts";
 
-import "./assets/styles.css"
+import "./assets/styles.css";
 import "virtual:uno.css";
 
 export const app = new App<State>();
 
 app.use(staticFiles());
+app.use(trailingSlashes("never"));
 
 // Include file-system based routes here
 app.fsRoutes();
