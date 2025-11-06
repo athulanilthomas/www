@@ -1,15 +1,17 @@
 export function Header() {
   const navLinks = [
-    { href: "/", label: "home", clientNav: true },
+    { href: "/", label: "home", ariaLabel: "Home", clientNav: true },
     {
       href: "/experience",
       label: "experience",
+      ariaLabel: "Experience",
       partial: "/partials/experience",
       clientNav: true,
     },
     {
       href: "/projects",
       label: "projects",
+      ariaLabel: "Projects",
       partial: "/partials/projects",
       clientNav: true,
     },
@@ -18,15 +20,22 @@ export function Header() {
   const socialLinks = [
     {
       icon: "i-grommet-icons:github",
+      ariaLabel: "Github",
       href: "https://github.com/athulanilthomas",
     },
     {
       icon: "i-grommet-icons:linkedin",
+      ariaLabel: "LinkedIn",
       href: "https://www.linkedin.com/in/athul-anil-thomas",
     },
-    { icon: "i-grommet-icons:x", href: "https://twitter.com/AthulAnilThoma2" },
+    {
+      icon: "i-grommet-icons:x",
+      ariaLabel: "X",
+      href: "https://twitter.com/AthulAnilThoma2",
+    },
     {
       icon: "i-grommet-icons:spotify",
+      ariaLabel: "Spotify",
       href: "https://open.spotify.com/user/31blayt3d6grdk7jtlm6zlsqp4oa",
     },
   ];
@@ -41,6 +50,7 @@ export function Header() {
                 <a
                   href={link.href}
                   class="data-[current]:text-primary hover:brightness-[0.8]"
+                  aria-label={link.ariaLabel}
                   f-partial={link.partial}
                   f-client-nav={link.clientNav}
                 >
@@ -49,17 +59,18 @@ export function Header() {
               </li>
             );
           })}
-          <span class="hidden lg:flex items-center gap-[1rem]">
+          <li class="hidden lg:flex items-center gap-[1rem]">
             {socialLinks.map((link) => {
               return (
                 <a
                   target="_blank"
+                  aria-label={link.ariaLabel}
                   class={`${link.icon} text-primary hover:brightness-[0.8]`}
                   href={link.href}
                 />
               );
             })}
-          </span>
+          </li>
         </ul>
       </nav>
     </header>
