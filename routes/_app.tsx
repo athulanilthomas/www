@@ -24,7 +24,7 @@ export default define.page(async function App({ Component, route }) {
         <link rel="icon" href="/favicon.ico"></link>
         <link rel="canonical" href={canonicalURL} />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"></link>
 
         {await getSSRAssetLink()}
       </head>
