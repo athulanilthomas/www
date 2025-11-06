@@ -3,15 +3,22 @@ export function Footer() {
   const links = [
     {
       icon: "i-grommet-icons:github",
+      ariaLabel: "Github",
       href: "https://github.com/athulanilthomas",
     },
     {
       icon: "i-grommet-icons:linkedin",
+      ariaLabel: "LinkedIn",
       href: "https://www.linkedin.com/in/athul-anil-thomas",
     },
-    { icon: "i-grommet-icons:x", href: "https://twitter.com/AthulAnilThoma2" },
+    {
+      icon: "i-grommet-icons:x",
+      ariaLabel: "X",
+      href: "https://twitter.com/AthulAnilThoma2",
+    },
     {
       icon: "i-grommet-icons:spotify",
+      ariaLabel: "Spotify",
       href: "https://open.spotify.com/user/31blayt3d6grdk7jtlm6zlsqp4oa",
     },
   ];
@@ -26,6 +33,7 @@ export function Footer() {
               <a
                 target="_blank"
                 href={link.href}
+                aria-label={link.ariaLabel}
                 class={`${link.icon} text-primary hover:brightness-[0.8]`}
               />
             ))}
