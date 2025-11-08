@@ -42,7 +42,7 @@ export function Home({ state }: { state: State }) {
             <strong>XP</strong>
             <p>working with JS universe</p>
           </div>
-          <div class="overflow-hidden">
+          <div class="overflow-clip">
             <SkillsCarousel class="w-100% mx-3.438rem my-2.125rem xl:m-unset" />
           </div>
         </section>
