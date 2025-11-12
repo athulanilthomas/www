@@ -25,6 +25,7 @@ export default define.page(async function App({ Component, route }) {
         <link rel="canonical" href={canonicalURL} />
 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"></link>
+        <link rel="preload" href={asset("/avatar.png")} as="image" type="image/png" />
 
         {await getSSRAssetLink()}
       </head>
